@@ -52,7 +52,7 @@ const books = [
     description: 'Libro acera de una familia',
     quantity: 200,
     price: 100,
-    writted_by: '1',
+    written_by: '1',
     register_by: '2'
   },
   {
@@ -61,7 +61,7 @@ const books = [
     description: 'Libro acerca de la explotacion laboral',
     quantity: 10,
     price: 50,
-    writted_by: '4',
+    written_by: '4',
     register_by: '1'
   },
   {
@@ -70,7 +70,7 @@ const books = [
     description: 'Poemas modernistas',
     quantity: 10,
     price: 20,
-    writted_by: '4',
+    written_by: '4',
     register_by: '2'
   },
   {
@@ -79,7 +79,7 @@ const books = [
     description: 'Libro acerca de las experiencias vividas',
     quantity: 25,
     price: 25,
-    writted_by: '1',
+    written_by: '1',
     register_by: '2'
   }
 ];

@@ -3,6 +3,7 @@ type Query {
     quantity: Int!,
     user(id: ID): [User!]!
     author(id: ID): [Author!]!
+    book(id: ID): [Book!]!
 }
 
 type User {
@@ -15,5 +16,15 @@ type Author {
     id: ID!
     name: String!
     country: String!
+    register_by: User!
+}
+
+type Book {
+    id: ID!
+    title: String!
+    description: String!
+    quantity: Int!
+    price: Float!
+    written_by: Author!
     register_by: User!
 }
