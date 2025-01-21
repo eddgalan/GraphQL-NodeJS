@@ -1,14 +1,18 @@
-import { createSchema } from 'graphql-yoga'
+import { createSchema } from 'graphql-yoga';
+import { loadSchemaSync } from '@graphql-tools/load';
+import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader';
+
+const typeDefinitions = loadSchemaSync('src/schemas/schema.graphql', {
+    loaders: [new GraphQLFileLoader()],
+});
+
+const resolvers = {
+    Query: {
+        hello: () => 'Hello World!',
+    },
+};
 
 export const schema = createSchema({
-    typeDefs: /* GraphQL */ `
-        type Query {
-            hello: String
-        }
-    `,
-    resolvers: {
-        Query: {
-            hello: () => 'world'
-        }
-    }
-})
+    resolvers: [resolvers],
+    typeDefs: [typeDefinitions],
+});
